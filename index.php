@@ -29,12 +29,12 @@ ul#menu li {
 </style>
 <ul id="menu">
 <?php foreach($timespans as $t): ?>
-    <li><a href="?ts=<?php echo $t; ?>"><?php echo $t; ?></a></href>
+    <li><a href="?ts=<?php echo $t; ?>"><?php echo $t; ?></a></li>
 <?php endforeach; ?>
 </ul>
 <?php foreach ($config['hostnames'] as $hostname): ?>
 <h1><?php echo $hostname; ?></h1>
     <?php foreach ($graphs as $graphname => $graphconfig): ?>
-        <img class="graph" src="<?php echo $config['img_dir'] . "/" . $hostname . "/" . $graphname . "_" . $timespan . ".png"; ?>" />
+        <img class="graph" alt="<?php echo $graphname; ?>" src="<?php echo $config['img_dir'] . "/" . $hostname . "/" . $graphname . "_" . $timespan . ".png"; ?>" />
     <?php endforeach; ?>
 <?php endforeach; ?>
