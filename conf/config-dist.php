@@ -4,13 +4,21 @@ define('DEBUG', False);
 $config = array( 
     "img_dir" => "images",
     "rrd_dir" => "/var/lib/collectd",
-    "hostnames" => array("server.example.com"),
+    "hostnames" => array("www.example.com"),
     # web interface
     "refresh_minutes" => 1,
+    "default_timespan" => "-1h",
+);
+
+$timespans = array(
+    "-15min",
+    "-1h",
+    "-1d",
+    "-1m",
+    "-1y",
 );
 
 $graph_defaults = array(
-    "--start", "-1hour",
     "--end", "now",
     "--width", "600",
     "--height", "400",
